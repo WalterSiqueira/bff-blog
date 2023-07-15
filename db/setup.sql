@@ -1,0 +1,13 @@
+-- Create the User table
+CREATE TABLE User (
+  username VARCHAR(50) PRIMARY KEY,
+  password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Post (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(50) NOT NULL,
+  title VARCHAR(100) NOT NULL,
+  content TEXT,
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

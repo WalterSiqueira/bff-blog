@@ -1,0 +1,45 @@
+.admin-page {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.admin-page__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.admin-page__content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form__label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.admin-form__input,
+.admin-form__textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.admin-form__submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-form__submit-btn:hover {
+  background-color: #0056b3;
+}
+

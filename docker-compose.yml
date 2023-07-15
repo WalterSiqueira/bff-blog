@@ -1,0 +1,40 @@
+services:
+  front:
+    build:
+      context: ./front
+      dockerfile: Dockerfile 
+    container_name: front 
+    ports:
+      - 3000:3000
+    depends_on: 
+      - db
+    volumes:
+      - ./front:/app
+  back:
+    build:
+      context: ./back
+      dockerfile: Dockerfile 
+    container_name: back
+    ports:
+      - 5000:5000
+    depends_on: 
+      - front
+      - db
+    volumes:
+      - ./back/src:/app
+
+  db:
+    build:
+      context: ./db
+    restart: always
+    container_name: db
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: suroot
+      MYSQL_DATABASE: user_info
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: root
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306

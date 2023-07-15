@@ -1,0 +1,44 @@
+.login-page {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.login-page__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-page__content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form__label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.login-form__input,
+.login-form__textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.login-form__submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form__submit-btn:hover {
+  background-color: #0056b3;
+}
