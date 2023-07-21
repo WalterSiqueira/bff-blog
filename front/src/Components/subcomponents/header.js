@@ -17,23 +17,37 @@ export function Header() {
   const handleRegisterRedirect = () => {
     navigate('/register');
   };
+    const homeHref = () => {
+        window.location.href='/';
+    }
+    const adminHref = () => {
+        window.location.href='/admin';
+    }
 
   return (
     <header className="header">
-      <h1 className="logo">blogger</h1>
+      <h1 onClick={homeHref} className="logo">blogger</h1>
       <nav className="nav">
         {isLogged ? (
-          <button className="logout" onClick={handleLogout}>
-            Logout
-          </button>
+            <>
+                <button className="logout" onClick={handleLogout}>
+                    Logout
+                </button>
+                <button className='admin-btn' onClick={adminHref} >
+                    Admin
+                </button>
+            </>
         ) : (
           <>
-            <button className="signin" onClick={handleRegisterRedirect}>
-              Sign in
-            </button>
-            <button className="login" onClick={handleLoginRedirect}>
-              Log in
-            </button>
+                <button className="signin" onClick={handleRegisterRedirect}>
+                  Sign in
+                </button>
+                <button className="login" onClick={handleLoginRedirect}>
+                  Log in
+                </button>
+                <button className='admin-btn' onClick={adminHref} >
+                    Admin
+                </button>
           </>
         )}
       </nav>

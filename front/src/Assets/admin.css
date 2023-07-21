@@ -6,6 +6,8 @@
 .admin-page__title {
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
+  color: cyan;
 }
 
 .admin-page__content {
@@ -13,6 +15,7 @@
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: solid cyan 2px;
 }
 
 .admin-form__label {
